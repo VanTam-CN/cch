@@ -1,0 +1,33 @@
+id: FACT-002
+type: FACT
+scope:
+  domain: demo
+  project: hub
+  topic: []
+status: ACTIVE
+confidence: TENTATIVE
+authority: AI_INFERRED
+priority: REFERENCE
+content: 虚构项目连接池先试 100 的试运行建议，尚未确认。
+rationale: Fictional example; no business authority.
+relations:
+  supersedes: []
+  depends_on: []
+  conflicts_with: []
+  derived_from: []
+provenance:
+  evidence_refs:
+  - EV-DEMO-001
+lifecycle:
+  valid_from: '2026-09-01'
+  valid_until: null
+  ttl_hours: null
+retrieval:
+  keywords:
+  - 连接池
+  - 上限
+  - pool
+  - 试运行
+  aliases: []
+tags:
+- synthetic

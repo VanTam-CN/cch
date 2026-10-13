@@ -1,0 +1,28 @@
+id: RULE-001
+type: RULE
+scope:
+  domain: demo
+  project: hub
+  topic: []
+status: ACTIVE
+confidence: CONFIRMED
+authority: USER_CONFIRMED
+priority: MUST
+content: 虚构演示规则：未确认建议必须保留 TENTATIVE，发布须经人工审查。
+rationale: Fictional example; no business authority.
+relations:
+  supersedes: []
+  depends_on: []
+  conflicts_with: []
+  derived_from: []
+provenance:
+  evidence_refs: []
+lifecycle:
+  valid_from: '2026-09-01'
+  valid_until: null
+  ttl_hours: null
+retrieval:
+  keywords: []
+  aliases: []
+tags:
+- synthetic

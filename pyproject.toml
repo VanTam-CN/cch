@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognitive-context-hub"
+version = "0.5.0rc1"
+description = "Local deterministic Cognitive Context Compiler with controlled publish and document ingest"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "VanTam"}]
+requires-python = ">=3.11"
+dependencies = ["PyYAML==6.0.3", "tiktoken==0.12.0", "python-docx==1.2.0", "pypdf==6.3.0"]
+
+[project.scripts]
+cch = "cch.cli:main"
+cch-asset = "cch.artifact.__main__:main"
+cch-memory = "cch.memory.cli:main"
+
+[project.optional-dependencies]
+memory-hindsight = ["hindsight-client>=0.10.0,<0.11"]
+test = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/VanTam-CN/cch"
+Repository = "https://github.com/VanTam-CN/cch"
+Issues = "https://github.com/VanTam-CN/cch/issues"
+
+[tool.setuptools.packages.find]
+include = ["cch*"]

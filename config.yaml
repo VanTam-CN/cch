@@ -1,0 +1,5 @@
+top_k: 5
+dependency_depth: 1
+tokenizer: cl100k_base
+evidence_words: [为什么, 依据, 出处, 来源, 原话, 谁定的, 证据, 核实, 原始]
+full_words: [原话, 原始, 具体依据]

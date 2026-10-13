@@ -1,0 +1,34 @@
+id: FACT-001
+type: FACT
+scope:
+  domain: demo
+  project: hub
+  topic: []
+status: ACTIVE
+confidence: CONFIRMED
+authority: DOCUMENT_CONFIRMED
+priority: REFERENCE
+content: 虚构项目当前连接池上限为 200。
+rationale: Fictional example; no business authority.
+relations:
+  supersedes:
+  - FACT-003
+  depends_on: []
+  conflicts_with: []
+  derived_from: []
+provenance:
+  evidence_refs:
+  - EV-DEMO-001
+lifecycle:
+  valid_from: '2026-09-01'
+  valid_until: null
+  ttl_hours: null
+retrieval:
+  keywords:
+  - 连接池
+  - 上限
+  - pool
+  - 试运行
+  aliases: []
+tags:
+- synthetic

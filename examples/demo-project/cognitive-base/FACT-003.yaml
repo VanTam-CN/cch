@@ -1,0 +1,33 @@
+id: FACT-003
+type: FACT
+scope:
+  domain: demo
+  project: hub
+  topic: []
+status: SUPERSEDED
+confidence: CONFIRMED
+authority: DOCUMENT_CONFIRMED
+priority: REFERENCE
+content: 虚构项目历史连接池上限为 150，已被替代。
+rationale: Fictional example; no business authority.
+relations:
+  supersedes: []
+  depends_on: []
+  conflicts_with: []
+  derived_from: []
+provenance:
+  evidence_refs:
+  - EV-DEMO-001
+lifecycle:
+  valid_from: '2026-09-01'
+  valid_until: null
+  ttl_hours: null
+retrieval:
+  keywords:
+  - 连接池
+  - 上限
+  - pool
+  - 试运行
+  aliases: []
+tags:
+- synthetic

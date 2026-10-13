@@ -1,0 +1,49 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Tests and synthetic demos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11'
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - name: Install local PDF preview dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Install package and optional SDK contract
+        run: uv pip install --system -e '.[test,memory-hindsight]'
+      - name: Prepare tokenizer cache
+        run: python tools/provision_tokenizer.py
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Run synthetic publication demo
+        run: python tools/e2e_acceptance.py
+      - name: Run synthetic asset demo
+        run: python tools/asset_demo.py
+      - name: Compile synthetic knowledge base
+        run: >-
+          python -m cch --base examples/demo-project context
+          --domain demo --project hub --as-of 2026-09-07
+          --query '连接池上限是多少？哪些只是试运行建议？'
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_VERSION: '8.30.1'
+          GITLEAKS_ENABLE_COMMENTS: 'false'
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: 'false'

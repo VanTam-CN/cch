@@ -1,0 +1,28 @@
+id: FACT-027
+type: FACT
+scope:
+  domain: demo
+  project: hub
+  topic: []
+status: ACTIVE
+confidence: CONFIRMED
+authority: DOCUMENT_CONFIRMED
+priority: REFERENCE
+content: 虚构填充记录 027：演示目录条目，不构成业务结论。
+rationale: Fictional example; no business authority.
+relations:
+  supersedes: []
+  depends_on: []
+  conflicts_with: []
+  derived_from: []
+provenance:
+  evidence_refs: []
+lifecycle:
+  valid_from: '2026-09-01'
+  valid_until: null
+  ttl_hours: null
+retrieval:
+  keywords: []
+  aliases: []
+tags:
+- synthetic

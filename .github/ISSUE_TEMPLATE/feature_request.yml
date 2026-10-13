@@ -1,0 +1,20 @@
+name: Feature request
+description: Explain a concrete workflow that CCH could support.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: What task is difficult today, and what result do you need?
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: Explain which part belongs in CCH and which part belongs in an external skill or model.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Example and success criteria
+      description: Use synthetic data and describe how a user could verify the improvement.

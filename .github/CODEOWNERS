@@ -1,0 +1,10 @@
+/.github/ @VanTam-CN
+/AGENTS.md @VanTam-CN
+/SECURITY.md @VanTam-CN
+/LICENSE @VanTam-CN
+/pyproject.toml @VanTam-CN
+/tests/ @VanTam-CN
+/cch/store.py @VanTam-CN
+/cch/publisher.py @VanTam-CN
+/cch/reviews.py @VanTam-CN
+/webui/ @VanTam-CN
